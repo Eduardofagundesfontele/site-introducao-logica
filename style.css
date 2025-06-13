@@ -1,0 +1,270 @@
+/* ------------------------------------ */
+/* Estilos Globais e do Corpo da Página */
+/* ------------------------------------ */
+html{
+       scroll-behavior: smooth; /* Para uma rolagem suave */
+    scroll-padding-top: 100px; /* para mostrar o h1 das divs */
+}
+body {
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0; /* Remove preenchimento padrão */
+    font-family: 'Playfair Display', serif; /* Fonte personalizada */
+    background: linear-gradient(135deg, #c3cfe2, #f5f7fa); /* Fundo com degradê suave */
+    min-height: 100vh; /* Garante que o corpo da página ocupe toda a altura da tela */
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* ------------------------------------ */
+/* Tipografia e Títulos                 */
+/* ------------------------------------ */
+h1 {
+    font-weight: 600;
+    color: #0d6efd; 
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+    text-align: center;
+    padding: 5px;
+}
+
+h2, h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0d6efd; 
+    border-bottom: 1px solid #0d6efd;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+    text-align: center;
+    padding: 5px;
+}
+
+p {
+    font-size: 1.125rem; /* Tamanho confortável para leitura */
+    color: #374151; /* Cinza escuro para boa legibilidade */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    max-width: 800px; /* Largura máxima para não cansar a leitura */
+    margin: 0 auto 24px auto; /* Centralizado com espaçamento inferior */
+    font-weight: 400; /*peso negrito */
+    text-align: justify; /* Texto alinhado dos dois lados */
+}
+
+/* ------------------------------------ */
+/* Seção Hero (Cabeçalho )     */
+/* ------------------------------------ */
+.hero-section {
+    position: relative; /* Permite posicionar elementos filhos */
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100vh; /* Ocupa 100% da altura visível da tela */
+    background: linear-gradient(to bottom right, #cfe8fc, #c5d7e4, #7ec7ec); /* Degradê de fundo */
+    background-image: url(img/fundo.png); /* Imagem de fundo, sobrepõe o degradê */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem de fundo */
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: space-between; /* Espaça entre header e conteúdo */
+    color: #fff; /* Cor padrão do texto */
+}
+
+/* Cabeçalho fixo dentro da seção hero */
+.hero-header {
+    display: flex; /* Ativa o flexbox */
+    justify-content: center; /* Centraliza a navegação horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 20px 40px; /* Espaçamento interno */
+    background: rgba(255, 255, 255, 0.15); /* Fundo branco translúcido para efeito glassmorphism */
+    backdrop-filter: blur(10px); /* Desfoque para criar o efeito de vidro */
+    position: fixed; /* Fixa no topo da página */
+    width: 100%; /* Ocupa 100% da largura */
+    top: 0; /* Alinha ao topo */
+    z-index: 100; /* Garante que fique acima de outros elementos */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Linha sutil na base */
+}
+
+/* Logo no cabeçalho */
+.hero-header .logo {
+    font-size: 1.5rem; /* Tamanho da fonte da logo */
+    font-weight: bold; /* Negrito */
+    color: #1e3a8a; /* Azul escuro */
+}
+
+/* Links de navegação do cabeçalho */
+.hero-header nav a {
+    margin-left: 25px; /* Espaçamento entre os links */
+    text-decoration: none; /* Remove o sublinhado */
+    color: #1e3a8a; /* Cor dos links */
+    font-weight: bold; /* Negrito */
+    transition: color 0.3s; /* Transição suave de cor ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse nos links de navegação */
+.hero-header nav a:hover {
+    color: #2563eb; /* Azul mais claro no hover */
+}
+
+/* Conteúdo centralizado da seção hero */
+.hero-content {
+    margin-top: auto; /* Empurra o conteúdo para o centro */
+    margin-bottom: auto; /* Empurra o conteúdo para o centro */
+    text-align: center; /* Centraliza o texto */
+    padding: 0 20px; /* Espaço nas laterais */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título principal na seção hero */
+.hero-content h1 {
+    font-size: 4rem; /* Tamanho grande para destaque */
+    font-weight: bold; /* Negrito */
+    color: #f4f2f2; /* Branco */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Sombra para destacar no fundo */
+}
+
+/* Texto descritivo na seção hero */
+.hero-content p {
+    font-size: 1.3rem; /* Tamanho do texto */
+    margin: 20px 0; /* Espaço acima e abaixo */
+    color: #ffffff; /* Tom suave de branco */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.587); /* Sombra sutil para contraste */
+    background-color: #5288b798;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Botão principal de ação */
+.btn-iniciar {
+    padding: 15px 30px; /* Espaço interno do botão */
+    background-color: #095f87; /* Azul escuro */
+    color: white; /* Texto branco */
+    font-size: 1.1rem; /* Tamanho do texto */
+    font-weight: bold; /* Negrito */
+    border: none; /* Sem borda padrão */
+    border-radius: 12px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Animações suaves */
+    text-decoration: none;
+}
+
+/* Efeito ao passar o mouse no botão */
+.btn-iniciar:hover {
+    background-color: #3f96cf; /* Azul mais claro no hover */
+    transform: translateY(-3px); /* Efeito de leve subida */
+}
+
+/* ------------------------------------ */
+/* Seções de Conteúdo Principal         */
+/* ------------------------------------ */
+main {
+    width: 90%; /* Ocupar 90% da largura da tela */
+    padding: 30px; /* Espaço interno ao redor do conteúdo */
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    gap: 40px; /* Espaço entre as seções */
+}
+
+/* Estilo glassmorphism para cada bloco de conteúdo dentro do 'main' */
+main > div {
+    background: rgba(255, 255, 255, 0.15);  
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px) saturate(150%); /* Desfoque , saturação leve */
+    border: 1px solid rgba(173, 216, 230, 0.4); /* Borda em tom de azul mais forte */
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse nos blocos de conteúdo */
+main > div:hover {
+    transform: scale(1.02); /* Leve zoom */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* Sombra mais forte no hover */
+}
+
+/* ------------------------------------ */
+/* Estilos de Carrossel e Cards         */
+/* ------------------------------------ */
+.card img {
+    height: 180px;
+    object-fit: cover; /* imagem cubra o espaço do card */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo dos ícones de controle */
+    padding: 10px;
+    border-radius: 50%; /* Deixa os ícones redondos */
+}
+
+/*  cards tenham uma altura exata */
+.card-text {
+    height: 200px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Centraliza o conteúdo do corpo do card */
+.card-body {
+    text-align: center; /* Centraliza horizontalmente todo o texto e elementos inline/inline-block */
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: space-between; /* Distribui espaço verticalmente, empurrando o botão para baixo */
+    height: 100%; /* Garante que o card-body ocupe a altura total disponível no card */
+}
+.card-img-top {
+    width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
+    height: 180px; /* Define uma altura fixa para as imagens dos cards. Ajuste conforme sua preferência. */
+    object-fit: contain; /* Faz a imagem caber inteira no espaço, sem cortes. Pode deixar espaços vazios. */
+    background-color: #f0f0f0; /* Opcional: Adiciona uma cor de fundo para o espaço vazio se a imagem não preencher tudo */
+}
+
+/* Adiciona margem superior ao botão para separá-lo do texto */
+.card-body .btn {
+    margin-top: auto; /* Empurra o botão para a parte inferior do espaço flexível */
+}
+
+/* ------------------------------------ */
+/* Estilos de Lista                     */
+/* ------------------------------------ */
+ul {
+    list-style: none; /* Remove marcadores padrão da lista */
+    padding: 0;
+    max-width: 400px;
+    margin: auto; /* Centraliza a lista */
+}
+
+li {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    cursor: pointer;
+}
+
+li:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1); /* Sombra mais forte no hover */
+}
+
+li i {
+    color: #4f46e5;
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+/* ------------------------------------ */
+/* Estilos de Imagem e Diversos         */
+/* ------------------------------------ */
+img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    border-radius: 10px; /* Bordas arredondadas  */
+    margin-top: 10px; /* Espaço acima da imagem */
+}
+
+/* Estilo específico para itens de lista (se usados como links) */
+.listItem {
+    text-decoration: none;
+    padding: 7px;
+}

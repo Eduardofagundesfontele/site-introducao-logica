@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução à Lógica de Programação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero-section">
+        <header class="hero-header">
+            <div class="logo"><img src="" alt=""></div>
+            <nav>
+                <a href="#introducao">Introdução</a>
+                <a href="#algoritmo">Algoritmo</a>
+                <a href="#loops">Loops</a>
+                <a href="#condicionais">Condicionais</a>
+            </nav>
+        </header>
+        <div class="hero-content">
+            <h1>Lógica de Programação</h1>
+            <p>Comece sua jornada no mundo da programação com clareza e criatividade.</p>
+          <a href="#introducao" class="btn-iniciar">Começar Agora</a>
+        </div>
+    </section>
+        <h2>linguagens mais usadas</h2>
+   <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="img/js.jpg" class="card-img-top" alt="JavaScript Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript</h5>
+                            <p class="card-text">JavaScript é a principal linguagem para desenvolvimento web, usada para criar páginas interativas no navegador (front-end) e também para construir servidores e APIs no back-end, por meio do Node.js. É essencial para aplicações modernas e dinâmicas na internet.</p>
+                            <a href="https://www.alura.com.br/artigos/javascript" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-none d-md-block">
+                    <div class="card shadow-sm">
+                        <img src="img/python.jpeg" class="card-img-top" alt="Python Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Python</h5>
+                            <p class="card-text">Python é uma linguagem de programação versátil e fácil de aprender, usada em diversas áreas como desenvolvimento web, automação, ciência de dados, inteligência artificial e scripts. Sua sintaxe simples e clara a torna popular tanto para iniciantes quanto para projetos complexos.</p>
+                            <a href="https://www.alura.com.br/artigos/python" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-none d-md-block">
+                    <div class="card shadow-sm">
+                        <img src="img/java.jpeg" class="card-img-top" alt="Java Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Java</h5>
+                            <p class="card-text">Java é uma linguagem de programação orientada a objetos, robusta e multiplataforma, muito usada no desenvolvimento de sistemas corporativos, aplicativos Android e back-end de grandes aplicações. É conhecida por sua estabilidade, segurança e ampla presença em concursos públicos de TI.</p>
+                            <a href="https://www.alura.com.br/artigos/java" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="img/csh.jpg" class="card-img-top" alt="C# Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">C#</h5>
+                            <p class="card-text">C# é uma linguagem de programação moderna e orientada a objetos, criada pela Microsoft, muito usada para desenvolver aplicações desktop, web, jogos (com Unity) e sistemas corporativos. É popular no ecossistema .NET e reconhecida pela sua produtividade e robustez.</p>
+                            <a href="https://www.alura.com.br/artigos/csharp-linguagem-programacao-dotnet" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-none d-md-block">
+                    <div class="card shadow-sm">
+                        <img src="img/php.jpeg" class="card-img-top" alt="PHP Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">PHP</h5>
+                            <p class="card-text">PHP é uma linguagem amplamente usada para desenvolvimento web no back-end, conhecida por sua facilidade de uso e compatibilidade com diversos servidores. Muito popular em sites dinâmicos e plataformas como WordPress, permite criar aplicações web rápidas e escaláveis.</p>
+                            <a href="https://www.alura.com.br/artigos/php" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-none d-md-block">
+                    <div class="card shadow-sm">
+                        <img src="img/kotlin.png" class="card-img-top" alt="Kotlin Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Kotlin</h5>
+                            <p class="card-text">Kotlin é uma linguagem moderna, criada pela JetBrains, e oficialmente suportada pelo Google para desenvolvimento Android. É compatível com Java, oferece uma sintaxe mais concisa e recursos avançados que facilitam a criação de aplicativos móveis seguros, rápidos e fáceis de manter.</p>
+                            <a href="https://www.alura.com.br/artigos/kotlin" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselCards" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+    </button>
+</div>
+    <main>
+        <div id="introducao" class="container my-5">
+            <h1 class="h1div">Introdução à Lógica de Programação</h1>
+            <p>
+                A lógica de programação é a base fundamental para qualquer pessoa que deseja se tornar um programador
+                ou atuar em áreas da computação. Antes mesmo de aprender linguagens como Java, Python ou JavaScript,
+                é essencial entender como estruturar ideias, planejar soluções e resolver problemas com raciocínio lógico
+                e sequencial.
+            </p>
+            <p>
+                Em essência, ela consiste no desenvolvimento de **algoritmos** — conjuntos de instruções
+                ordenadas, lógicas e finitas que visam resolver tarefas específicas. Um algoritmo pode ser descrito de
+                diversas formas: em linguagem natural, fluxogramas, pseudocódigos ou diretamente em linguagens de programação.
+            </p>
+            <p>
+                Dominar lógica de programação permite transformar situações do mundo real — como calcular o troco de uma compra
+                ou automatizar uma planilha — em soluções computacionais eficazes.
+            </p>
+
+            <h2>Por que aprender lógica de programação?</h2>
+            <p>
+                Aprender lógica de programação é o primeiro e mais importante passo para quem quer seguir carreira na área de tecnologia.
+                Além disso, é uma competência que estimula o pensamento crítico e ajuda a desenvolver habilidades mentais úteis em
+                várias profissões e contextos.
+            </p>
+            <ul>
+                <li>Pensar de forma analítica e estruturada</li>
+                <li>Resolver problemas com clareza, passo a passo</li>
+                <li>Facilitar o aprendizado de qualquer linguagem de programação</li>
+                <li>Criar algoritmos para automatizar tarefas cotidianas</li>
+                <li>Preparar-se melhor para entrevistas técnicas e desafios de lógica</li>
+                <li>Desenvolver raciocínio para resolver problemas de forma eficiente</li>
+            </ul>
+
+            <h2>Conceitos Básicos de Lógica de Programação</h2>
+            <ul>
+                <li><strong>Variáveis:</strong> espaços para armazenar valores que podem mudar durante a execução do programa.</li>
+                <li><strong>Constantes:</strong> valores que não mudam enquanto o programa estiver em execução.</li>
+                <li><strong>Tipos de dados:</strong> inteiros, reais, booleanos, textos (strings), entre outros.</li>
+                <li><strong>Operadores:</strong> usados para realizar cálculos ou comparações (ex: +, -, *, /, >, ==).</li>
+                <li><strong>Estruturas de decisão:</strong> comandos que permitem tomar decisões (ex: `if`, `else`).</li>
+                <li><strong>Laços de repetição:</strong> estruturas para repetir blocos de código (ex: `for`, `while`).</li>
+                <li><strong>Funções:</strong> blocos de código reutilizáveis que executam tarefas específicas.</li>
+            </ul>
+
+            <h2>Mercado de Trabalho</h2>
+            <p>
+                A lógica de programação é uma das habilidades mais procuradas e valorizadas no mercado de tecnologia.
+                Não importa a linguagem ou área de especialização, dominar a lógica é um diferencial competitivo.
+            </p>
+            <ul>
+                <li>Alta demanda por profissionais com raciocínio lógico sólido</li>
+                <li>Vagas em empresas nacionais e internacionais de tecnologia</li>
+                <li>Destaque em processos seletivos técnicos e entrevistas de emprego</li>
+                <li>Base necessária para áreas de automação, inteligência artificial e desenvolvimento web</li>
+                <li>Indispensável para concursos públicos na área de TI</li>
+            </ul>
+
+            <h2>Áreas de Atuação</h2>
+            <p>
+                A lógica de programação é essencial em praticamente todas as áreas da computação. Veja abaixo alguns campos
+                onde ela é especialmente importante:
+            </p>
+            <ul>
+                <li><strong>Desenvolvimento de Software:</strong> criação de sites, sistemas e aplicativos mobile.</li>
+                <li><strong>Ciência de Dados:</strong> análise e interpretação de grandes volumes de dados.</li>
+                <li><strong>Inteligência Artificial:</strong> criação de algoritmos inteligentes e sistemas de aprendizado de máquina.</li>
+                <li><strong>Automação:</strong> desenvolvimento de robôs, scripts e soluções para aumentar a produtividade.</li>
+                <li><strong>Concursos Públicos:</strong> diversas provas cobram lógica de programação como disciplina fundamental.</li>
+                <li><strong>Cibersegurança:</strong> análise de padrões lógicos para detectar falhas e ataques.</li>
+            </ul>
+
+            <h2>Exemplo Prático</h2>
+            <p>Veja um exemplo simples de algoritmo em pseudocódigo para somar dois números:</p>
+            <pre><code>
+Inicio
+    Escreva("Digite o primeiro número:")
+    Leia(num1)
+    Escreva("Digite o segundo número:")
+    Leia(num2)
+    soma &lt;- num1 + num2
+    Escreva("A soma é: ", soma)
+Fim
+            </code></pre>
+            <p>Esse algoritmo mostra uma estrutura lógica simples, onde há entrada de dados, processamento e saída.</p>
+        </div>
+
+        <div id="algoritmo" class="container my-5">
+            <h1 class="h1div">Algoritmo</h1>
+            <p>
+                Um **algoritmo** é uma sequência de passos bem definidos e ordenados que descrevem como resolver um problema ou realizar uma tarefa.
+                Ele pode ser representado em linguagem natural, pseudocódigo, fluxogramas ou diretamente em linguagens de programação.
+            </p>
+            <p>
+                No contexto da programação, o algoritmo é o plano de ação que o computador deve seguir para atingir um objetivo. Ele precisa ser **claro**, **lógico** e **finito** — ou seja, deve sempre levar a um resultado e terminar em algum momento.
+            </p>
+
+            <h3>Características de um bom algoritmo</h3>
+            <ul>
+                <li><strong>Clareza:</strong> cada passo deve ser bem definido e fácil de entender.</li>
+                <li><strong>Finitude:</strong> o algoritmo deve terminar após um número limitado de passos.</li>
+                <li><strong>Precisão:</strong> não deve haver ambiguidade nas instruções.</li>
+                <li><strong>Eficiência:</strong> deve utilizar os recursos de forma otimizada.</li>
+            </ul>
+
+            <h3>Exemplo de Algoritmo (em linguagem natural)</h3>
+            <p>Algoritmo para fazer um café:</p>
+            <ol>
+                <li>Esquentar a água.</li>
+                <li>Colocar o pó de café no filtro.</li>
+                <li>Despejar a água quente sobre o pó.</li>
+                <li>Esperar o café coar.</li>
+                <li>Servir o café na xícara.</li>
+            </ol>
+
+            <h3>Exemplo de Algoritmo (em pseudocódigo)</h3>
+            <pre><code>
+Início
+    Escreva("Digite um número:")
+    Leia(numero)
+    se numero % 2 = 0 então
+        Escreva("O número é par")
+    senão
+        Escreva("O número é ímpar")
+Fim
+            </code></pre>
+
+            <h3>Importância dos Algoritmos</h3>
+            <p>
+                Algoritmos são usados em absolutamente tudo na programação: desde cálculos simples até o funcionamento de
+                redes sociais, jogos, aplicativos bancários e inteligência artificial. Quanto mais eficiente for um algoritmo,
+                melhor será o desempenho do sistema.
+            </p>
+
+            <h3>Onde os algoritmos são aplicados?</h3>
+            <ul>
+                <li>Ordenar listas (ex: ordenar nomes ou números)</li>
+                <li>Buscar informações (ex: encontrar um produto em um site)</li>
+                <li>Calcular rotas (ex: Google Maps)</li>
+                <li>Filtrar dados (ex: e-mails com spam)</li>
+                <li>Recomendar conteúdo (ex: vídeos no YouTube)</li>
+            </ul>
+
+            <p>
+                Aprender a criar algoritmos é aprender a resolver problemas com lógica e planejamento.
+                Essa habilidade é indispensável para programadores e profissionais de tecnologia.
+                Com prática, você será capaz de criar soluções eficientes e inteligentes para os mais diversos desafios.
+            </p>
+        </div>
+
+        <div id="loops" class="container my-5">
+            <h1 class="h1div">Loops (Laços de Repetição)</h1>
+            <p>
+                Loops, também chamados de **laços de repetição**, são estruturas da programação usadas para **repetir um bloco de código várias vezes**, enquanto uma determinada condição for verdadeira.
+                Eles são fundamentais para automatizar tarefas repetitivas e economizar linhas de código.
+            </p>
+
+            <h3>Tipos de Loops</h3>
+            <ul>
+                <li><strong>Laço "enquanto" (while):</strong> repete enquanto a condição for verdadeira.</li>
+                <li><strong>Laço "faça-enquanto" (do...while):</strong> executa pelo menos uma vez antes de verificar a condição.</li>
+                <li><strong>Laço "para" (for):</strong> usado quando se sabe o número exato de repetições.</li>
+            </ul>
+
+            <h3>Exemplos em pseudocódigo</h3>
+
+            <h4>Laço "enquanto" (while)</h4>
+            <pre><code>
+contador &lt;- 1
+enquanto contador &lt;= 5 faça
+    escreva("Valor: ", contador)
+    contador &lt;- contador + 1
+fim enquanto
+            </code></pre>
+
+            <h4>Laço "faça-enquanto" (do...while)</h4>
+            <pre><code>
+contador &lt;- 1
+faça
+    escreva("Valor: ", contador)
+    contador &lt;- contador + 1
+enquanto contador &lt;= 5
+            </code></pre>
+
+            <h4>Laço "para" (for)</h4>
+            <pre><code>
+para i de 1 até 5 faça
+    escreva("Valor: ", i)
+fim para
+            </code></pre>
+
+            <h3>Quando usar cada tipo de loop?</h3>
+            <ul>
+                <li><strong>while:</strong> quando você não sabe quantas vezes o código deve repetir (ex: até o usuário digitar "sair").</li>
+                <li><strong>do...while:</strong> quando você quer garantir que o bloco seja executado pelo menos uma vez.</li>
+                <li><strong>for:</strong> quando você sabe exatamente o número de repetições.</li>
+            </ul>
+
+            <h3>Aplicações práticas dos loops</h3>
+            <ul>
+                <li>Exibir uma contagem ou sequência numérica</li>
+                <li>Repetir perguntas até o usuário digitar uma resposta válida</li>
+                <li>Percorrer listas ou arrays de dados</li>
+                <li>Calcular somas ou médias de vários valores</li>
+                <li>Gerar tabuada ou relatórios automatizados</li>
+            </ul>
+
+            <h3>Conclusão</h3>
+            <p>
+                Os loops são ferramentas essenciais da lógica de programação. Eles permitem automatizar tarefas repetitivas de forma eficiente e são usados em praticamente todos os algoritmos e programas. Dominar o uso de loops é um passo importante para resolver problemas complexos de forma simples e elegante.
+            </p>
+        </div>
+
+        <div id="condicionais" class="container my-5">
+            <h1 class="h1div">Condicionais (Estruturas de Decisão)</h1>
+            <p>
+                Condicionais, também chamadas de **estruturas de decisão**, são usadas para executar diferentes blocos de código dependendo de uma condição.
+                Elas permitem que o programa tome decisões, seguindo caminhos diferentes de acordo com os dados de entrada ou o resultado de operações.
+            </p>
+
+            <h3>Principais estruturas condicionais</h3>
+            <ul>
+                <li><strong>if (se):</strong> executa um bloco se a condição for verdadeira.</li>
+                <li><strong>else (senão):</strong> executa outro bloco se a condição for falsa.</li>
+                <li><strong>else if (senão se):</strong> permite testar múltiplas condições.</li>
+                <li><strong>switch (escolha):</strong> estrutura alternativa para múltiplos caminhos baseados em valores fixos.</li>
+            </ul>
+
+            <h3>Exemplo com `if` e `else` (em pseudocódigo)</h3>
+            <pre><code>
+Escreva("Digite sua idade:")
+Leia(idade)
+
+se idade >= 18 então
+    Escreva("Você é maior de idade.")
+senão
+    Escreva("Você é menor de idade.")
+            </code></pre>
+
+            <h3>Exemplo com `if`, `else if` e `else`</h3>
+            <pre><code>
+Escreva("Digite sua nota:")
+Leia(nota)
+
+se nota >= 7 então
+    Escreva("Aprovado")
+senão se nota >= 5 então
+    Escreva("Em recuperação")
+senão
+    Escreva("Reprovado")
+            </code></pre>
+
+            <h3>Exemplo com `switch` (pseudocódigo)</h3>
+            <pre><code>
+Escreva("Digite o dia da semana (1 a 7):")
+Leia(dia)
+
+escolha dia
+    caso 1: Escreva("Domingo")
+    caso 2: Escreva("Segunda")
+    caso 3: Escreva("Terça")
+    caso 4: Escreva("Quarta")
+    caso 5: Escreva("Quinta")
+    caso 6: Escreva("Sexta")
+    caso 7: Escreva("Sábado")
+    outrocaso: Escreva("Dia inválido")
+fim escolha
+            </code></pre>
+
+            <h3>Aplicações práticas</h3>
+            <ul>
+                <li>Verificar se um número é positivo, negativo ou zero</li>
+                <li>Testar se uma senha digitada está correta</li>
+                <li>Classificar faixas etárias ou notas escolares</li>
+                <li>Tomar decisões em jogos ou formulários</li>
+                <li>Executar ações diferentes conforme o botão clicado</li>
+            </ul>
+
+            <h3>Conclusão</h3>
+            <p>
+                As estruturas condicionais são essenciais para tornar um programa inteligente e adaptável.
+                Elas permitem criar sistemas que tomam decisões de acordo com as situações apresentadas, sendo fundamentais para qualquer linguagem de programação.
+            </p>
+        </div>
+
+        <div id="carouselExample" class="carousel slide container my-5">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/f1.png" class="d-block w-100" alt="Flowchart Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/f2.webp" class="d-block w-100" alt="Flowchart Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/f3.png" class="d-block w-100" alt="Flowchart Image 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
