@@ -2,7 +2,7 @@
 /* Estilos Globais e do Corpo da Página */
 /* ------------------------------------ */
 html{
-       scroll-behavior: smooth; /* Para uma rolagem suave */
+    scroll-behavior: smooth; /* Para uma rolagem suave */
     scroll-padding-top: 100px; /* para mostrar o h1 das divs */
 }
 body {
@@ -21,7 +21,7 @@ body {
 /* ------------------------------------ */
 h1 {
     font-weight: 600;
-    color: #0d6efd; 
+    color: #0d6efd;
     padding-bottom: 5px;
     margin-bottom: 12px;
     text-align: center;
@@ -31,12 +31,22 @@ h1 {
 h2, h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #0d6efd; 
+    color: #0d6efd;
     border-bottom: 1px solid #0d6efd;
     padding-bottom: 5px;
     margin-bottom: 12px;
     text-align: center;
     padding: 5px;
+}
+
+.section-title { /* Título do carrossel */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0d6efd;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: none; /* Remover borda inferior do título do carrossel */
 }
 
 p {
@@ -50,7 +60,7 @@ p {
 }
 
 /* ------------------------------------ */
-/* Seção Hero (Cabeçalho )     */
+/* Seção Hero (Cabeçalho )              */
 /* ------------------------------------ */
 .hero-section {
     position: relative; /* Permite posicionar elementos filhos */
@@ -60,6 +70,7 @@ p {
     background-image: url(img/fundo.png); /* Imagem de fundo, sobrepõe o degradê */
     background-size: cover; /* Faz a imagem cobrir todo o espaço */
     background-position: center; /* Centraliza a imagem de fundo */
+    background-attachment: fixed; /* Adiciona efeito paralaxe na imagem de fundo */
     display: flex; /* Ativa o flexbox */
     flex-direction: column; /* Organiza os elementos verticalmente */
     justify-content: space-between; /* Espaça entre header e conteúdo */
@@ -69,9 +80,9 @@ p {
 /* Cabeçalho fixo dentro da seção hero */
 .hero-header {
     display: flex; /* Ativa o flexbox */
-    justify-content: center; /* Centraliza a navegação horizontalmente */
+    justify-content: space-between; /* Espaça logo e nav em vez de só centralizar tudo */
     align-items: center; /* Alinha verticalmente ao centro */
-    padding: 20px 40px; /* Espaçamento interno */
+    padding: 15px 40px; /* Espaçamento interno */
     background: rgba(255, 255, 255, 0.15); /* Fundo branco translúcido para efeito glassmorphism */
     backdrop-filter: blur(10px); /* Desfoque para criar o efeito de vidro */
     position: fixed; /* Fixa no topo da página */
@@ -158,6 +169,7 @@ p {
 /* ------------------------------------ */
 main {
     width: 90%; /* Ocupar 90% da largura da tela */
+    max-width: 1200px; /* Adiciona um max-width para não esticar demais em telas muito largas */
     padding: 30px; /* Espaço interno ao redor do conteúdo */
     display: flex; /* Ativa flexbox */
     flex-direction: column; /* Organiza os elementos verticalmente */
@@ -166,7 +178,7 @@ main {
 
 /* Estilo glassmorphism para cada bloco de conteúdo dentro do 'main' */
 main > div {
-    background: rgba(255, 255, 255, 0.15);  
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -196,9 +208,10 @@ main > div:hover {
     border-radius: 50%; /* Deixa os ícones redondos */
 }
 
-/*  cards tenham uma altura exata */
+/* cards tenham uma altura exata */
 .card-text {
-    height: 200px; 
+    min-height: 120px; /* Altura mínima para evitar que cards menores fiquem muito curtos */
+    max-height: 180px; /* Altura máxima para não alongar demais em textos curtos */
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -267,4 +280,152 @@ img {
 .listItem {
     text-decoration: none;
     padding: 7px;
+}
+
+/* ------------------------------------ */
+/* Media Queries para Responsividade    */
+/* ------------------------------------ */
+
+/* Telas menores que 992px (desktops pequenos, tablets e celulares) */
+@media (max-width: 991.98px) {
+    .hero-header nav a {
+        margin-left: 15px; /* Reduz espaço entre links de navegação */
+    }
+
+    .hero-content h1 {
+        font-size: 3rem; /* Reduz título principal */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Reduz texto principal */
+    }
+
+    /* Carrossel de Cards: 2 cards por vez em tablets */
+    #carouselCards .carousel-item .col-md-4 + .d-none.d-md-block:nth-child(3) {
+        display: block !important; /* Mostra o segundo card para col-md-4 */
+    }
+    #carouselCards .carousel-item .col-md-4 + .d-none.d-lg-block {
+        display: none !important; /* Esconde o terceiro card em tablets */
+    }
+}
+
+/* Telas menores que 768px (tablets em retrato e celulares) */
+@media (max-width: 767.98px) {
+    .hero-header {
+        flex-direction: column; /* Empilha logo e navegação */
+        align-items: center; /* Centraliza itens na coluna */
+        padding: 10px 15px;
+    }
+
+    .hero-header .logo {
+        font-size: 1.2rem;
+        margin-bottom: 10px; /* Espaço entre logo e navegação */
+    }
+
+    .hero-header nav {
+        flex-wrap: wrap; /* Permite que os links quebrem */
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .hero-header nav a {
+        margin: 5px 8px; /* Mais compacto em links de navegação */
+        font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Reduz o título principal em mobile */
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Reduz o tamanho do parágrafo principal em mobile */
+        margin: 15px 0;
+    }
+
+    .btn-iniciar {
+        padding: 12px 25px; /* Reduz o padding do botão */
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    main {
+        width: 95%; /* Ocupa mais largura em mobile */
+        padding: 15px; /* Reduz o padding do main */
+        gap: 30px;
+    }
+
+    main > div {
+        padding: 15px; /* Reduz o padding interno dos blocos de conteúdo */
+        border-radius: 15px;
+    }
+
+    h1.h1div { /* O título dentro das divs do main */
+        font-size: 2rem; /* Ajusta o tamanho do h1 das seções */
+        margin-bottom: 15px;
+    }
+
+    h2, h3 {
+        font-size: 1.3rem; /* Reduz o tamanho dos subtítulos */
+        margin-bottom: 10px;
+        padding: 3px;
+    }
+
+    p {
+        font-size: 1rem; /* Reduz o tamanho do texto para mobile */
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        padding: 0 10px; /* Adiciona um pequeno padding lateral para não colar nas bordas */
+    }
+
+    li {
+        padding: 12px 15px; /* Reduz o padding dos itens de lista */
+        margin-bottom: 8px;
+        font-size: 0.95rem; /* Ajusta o tamanho da fonte dos itens de lista */
+    }
+
+    /* Carrossel de Cards: 1 card por vez em mobile */
+    #carouselCards .carousel-item .col-md-4 {
+        width: 100%; /* Cada card ocupa 100% da largura em mobile */
+        margin-bottom: 20px; /* Espaço entre os cards empilhados, se houvesse mais de um visível */
+    }
+    #carouselCards .carousel-item .d-none.d-md-block {
+        display: none !important; /* Garante que os cards extras sejam escondidos */
+    }
+}
+
+/* Telas menores que 480px (smartphones menores) */
+@media (max-width: 479.98px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    .btn-iniciar {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    h1.h1div {
+        font-size: 1.8rem;
+    }
+    h2, h3 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 0.95rem;
+    }
+    li {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
 }
