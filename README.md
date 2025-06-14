@@ -1,4 +1,3 @@
-Here's a README.md for your project, written in Portuguese, based on the content you provided:
 
 🚀 Introdução à Lógica de Programação
 Este projeto é um guia interativo para iniciantes no mundo da lógica de programação, uma habilidade fundamental para qualquer pessoa que deseja se tornar um programador. Aqui, você encontrará explicações claras sobre os conceitos essenciais que formam a base de qualquer linguagem de programação.
@@ -53,3 +52,6 @@ Bootstrap 5.3: Um framework CSS para componentes responsivos, como carrosséis e
 Se você gostou deste projeto e quer contribuir, sinta-se à vontade para abrir issues ou pull requests!
 
 Esperamos que este recurso ajude você a dar os primeiros passos sólidos no fascinante mundo da programação!
+
+LINK PARA ACESSO E COMPARTILHAMENTO: 
+
