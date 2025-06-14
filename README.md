@@ -53,5 +53,5 @@ Se você gostou deste projeto e quer contribuir, sinta-se à vontade para abrir 
 
 Esperamos que este recurso ajude você a dar os primeiros passos sólidos no fascinante mundo da programação!
 
-LINK PARA ACESSO E COMPARTILHAMENTO: 
+LINK PARA ACESSO E COMPARTILHAMENTO:  https://eduardofagundesfontele.github.io/site-introducao-logica/
 
